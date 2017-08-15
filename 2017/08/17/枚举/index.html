@@ -94,19 +94,19 @@
 
 
 
-<meta name="description" content="枚举类型是学任何一门语言都会接触到的一个语法点。这个语法点在教材上出现得很突兀，使用频率不高。 而且初学时，不容易get到它的应用场景，所以往往都选择跳过。（其实问题并不大，这不是一个很重要的语法点） 但既然是通用语法的一部分，我们还是很有必要（闲得发慌）去探究一下它的原理与作用。 一。枚举类型的原理1234567以C++为例：enum 枚举名&amp;#123;      标识符[=整型常数],">
+<meta name="description" content="枚举类型是学任何一门语言都会接触到的一个语法点。这个语法点在教材上出现得很突兀，使用频率不高。 而且初学时，不容易get到它的应用场景，所以往往都选择跳过。（其实问题并不大，这不是一个很重要的语法点） 但既然是通用语法的一部分，我们还是很有必要（闲得发慌）去探究一下它的原理与作用。 枚举类型的原理1234567以C++为例：enum 枚举名&amp;#123;      标识符[=整型常数],">
 <meta name="keywords" content="通用基础语法">
 <meta property="og:type" content="article">
 <meta property="og:title" content="枚举类型--尽可能简洁地表达">
 <meta property="og:url" content="http://yoursite.com/2017/08/17/枚举/index.html">
 <meta property="og:site_name" content="RecXI个人博客">
-<meta property="og:description" content="枚举类型是学任何一门语言都会接触到的一个语法点。这个语法点在教材上出现得很突兀，使用频率不高。 而且初学时，不容易get到它的应用场景，所以往往都选择跳过。（其实问题并不大，这不是一个很重要的语法点） 但既然是通用语法的一部分，我们还是很有必要（闲得发慌）去探究一下它的原理与作用。 一。枚举类型的原理1234567以C++为例：enum 枚举名&amp;#123;      标识符[=整型常数],">
+<meta property="og:description" content="枚举类型是学任何一门语言都会接触到的一个语法点。这个语法点在教材上出现得很突兀，使用频率不高。 而且初学时，不容易get到它的应用场景，所以往往都选择跳过。（其实问题并不大，这不是一个很重要的语法点） 但既然是通用语法的一部分，我们还是很有必要（闲得发慌）去探究一下它的原理与作用。 枚举类型的原理1234567以C++为例：enum 枚举名&amp;#123;      标识符[=整型常数],">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://yoursite.com/2017/08/17/枚举/1.png">
-<meta property="og:updated_time" content="2017-08-15T13:52:09.356Z">
+<meta property="og:updated_time" content="2017-08-15T15:22:13.298Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="枚举类型--尽可能简洁地表达">
-<meta name="twitter:description" content="枚举类型是学任何一门语言都会接触到的一个语法点。这个语法点在教材上出现得很突兀，使用频率不高。 而且初学时，不容易get到它的应用场景，所以往往都选择跳过。（其实问题并不大，这不是一个很重要的语法点） 但既然是通用语法的一部分，我们还是很有必要（闲得发慌）去探究一下它的原理与作用。 一。枚举类型的原理1234567以C++为例：enum 枚举名&amp;#123;      标识符[=整型常数],">
+<meta name="twitter:description" content="枚举类型是学任何一门语言都会接触到的一个语法点。这个语法点在教材上出现得很突兀，使用频率不高。 而且初学时，不容易get到它的应用场景，所以往往都选择跳过。（其实问题并不大，这不是一个很重要的语法点） 但既然是通用语法的一部分，我们还是很有必要（闲得发慌）去探究一下它的原理与作用。 枚举类型的原理1234567以C++为例：enum 枚举名&amp;#123;      标识符[=整型常数],">
 <meta name="twitter:image" content="http://yoursite.com/2017/08/17/枚举/1.png">
 
 
@@ -264,7 +264,7 @@
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="RecXI">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="image" content="/images/1.jpg">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -329,7 +329,7 @@
         <p>枚举类型是学任何一门语言都会接触到的一个语法点。这个语法点在教材上出现得很突兀，使用频率不高。</p>
 <p>而且初学时，不容易get到它的应用场景，所以往往都选择跳过。（其实问题并不大，这不是一个很重要的语法点）</p>
 <p>但既然是通用语法的一部分，我们还是很有必要（闲得发慌）去探究一下它的原理与作用。</p>
-<h1 id="一。枚举类型的原理"><a href="#一。枚举类型的原理" class="headerlink" title="一。枚举类型的原理"></a>一。枚举类型的原理</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">以C++为例：</div><div class="line">enum 枚举名&#123; </div><div class="line">     标识符[=整型常数], </div><div class="line">     标识符[=整型常数], </div><div class="line">... </div><div class="line">    标识符[=整型常数]</div><div class="line">&#125; 枚举变量;</div></pre></td></tr></table></figure>
+<h1 id="枚举类型的原理"><a href="#枚举类型的原理" class="headerlink" title="枚举类型的原理"></a>枚举类型的原理</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">以C++为例：</div><div class="line">enum 枚举名&#123; </div><div class="line">     标识符[=整型常数], </div><div class="line">     标识符[=整型常数], </div><div class="line">... </div><div class="line">    标识符[=整型常数]</div><div class="line">&#125; 枚举变量;</div></pre></td></tr></table></figure>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">实验代码：</div><div class="line">typedef enum &#123;</div><div class="line">    down = 1,</div><div class="line">    right,</div><div class="line">    up,</div><div class="line">    left,</div><div class="line">&#125; Direction;</div><div class="line"></div><div class="line">//相当于把1,2两个整数分别赋给两个枚举变量</div><div class="line">Direction dir_d = down; </div><div class="line">Direction dir_r = right;</div></pre></td></tr></table></figure>
 <p>我们发现枚举变量与两个语法很像：<br>①宏定义 #define down 1  （不分配空间）<br>②整型常量 const int down = 1;   （分配空间）</p>
 <p>不管枚举常量的原理是哪一种，有一点是确定的：</p>
@@ -337,7 +337,7 @@
 <p>我们通过另外一个实验可以大致确定：</p>
 <h3 id="枚举的原理是”批量宏定义”而不是常量定义。"><a href="#枚举的原理是”批量宏定义”而不是常量定义。" class="headerlink" title="枚举的原理是”批量宏定义”而不是常量定义。"></a>枚举的原理是”批量宏定义”而不是常量定义。</h3><h3 id="一个枚举类相当于封装了一组有规律的宏"><a href="#一个枚举类相当于封装了一组有规律的宏" class="headerlink" title="一个枚举类相当于封装了一组有规律的宏"></a>一个枚举类相当于封装了一组有规律的宏</h3><h3 id="一个枚举类的实例变量只能在这组宏里面选一个套上。"><a href="#一个枚举类的实例变量只能在这组宏里面选一个套上。" class="headerlink" title="一个枚举类的实例变量只能在这组宏里面选一个套上。"></a>一个枚举类的实例变量只能在这组宏里面选一个套上。</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">实验的思路是：查看数值改变后的错误信息：</div><div class="line"></div><div class="line">const_test = 2;  //整型常量</div><div class="line">macro_test = 2;	 //整型常量</div><div class="line">down = 2;        //枚举常量</div><div class="line"></div><div class="line">cout&lt;&lt;const_test&lt;&lt;endl;</div><div class="line">cout&lt;&lt;const_test&lt;&lt;endl;</div><div class="line">cout&lt;&lt;const_test&lt;&lt;endl;</div></pre></td></tr></table></figure>
 <p><img src="/2017/08/17/枚举/1.png" alt=""></p>
-<h1 id="二。枚举的作用："><a href="#二。枚举的作用：" class="headerlink" title="二。枚举的作用："></a>二。枚举的作用：</h1><h3 id="增强程序的可读性，即：面向语义编程"><a href="#增强程序的可读性，即：面向语义编程" class="headerlink" title="增强程序的可读性，即：面向语义编程"></a>增强程序的可读性，即：面向语义编程</h3>
+<h1 id="枚举的作用："><a href="#枚举的作用：" class="headerlink" title="枚举的作用："></a>枚举的作用：</h1><h3 id="增强程序的可读性，即：面向语义编程"><a href="#增强程序的可读性，即：面向语义编程" class="headerlink" title="增强程序的可读性，即：面向语义编程"></a>增强程序的可读性，即：面向语义编程</h3>
       
     </div>
     
@@ -367,8 +367,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/08/16/test/" rel="next" title="test">
-                <i class="fa fa-chevron-left"></i> test
+              <a href="/2017/08/15/C-标准流重定向/" rel="next" title="C++标准流重定向">
+                <i class="fa fa-chevron-left"></i> C++标准流重定向
               </a>
             
           </div>
@@ -440,7 +440,7 @@
       <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
-               src="/images/avatar.gif"
+               src="/images/1.jpg"
                alt="RecXI" />
           <p class="site-author-name" itemprop="name">RecXI</p>
            
@@ -452,7 +452,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives/">
-                <span class="site-state-item-count">3</span>
+                <span class="site-state-item-count">2</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -465,7 +465,7 @@
             
             <div class="site-state-item site-state-tags">
               
-                <span class="site-state-item-count">3</span>
+                <span class="site-state-item-count">2</span>
                 <span class="site-state-item-name">标签</span>
               
             </div>
@@ -500,7 +500,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#一。枚举类型的原理"><span class="nav-number">1.</span> <span class="nav-text">一。枚举类型的原理</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#枚举是一种”批量化定义”"><span class="nav-number">1.0.1.</span> <span class="nav-text">枚举是一种”批量化定义”</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#枚举的原理是”批量宏定义”而不是常量定义。"><span class="nav-number">1.0.2.</span> <span class="nav-text">枚举的原理是”批量宏定义”而不是常量定义。</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#一个枚举类相当于封装了一组有规律的宏"><span class="nav-number">1.0.3.</span> <span class="nav-text">一个枚举类相当于封装了一组有规律的宏</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#一个枚举类的实例变量只能在这组宏里面选一个套上。"><span class="nav-number">1.0.4.</span> <span class="nav-text">一个枚举类的实例变量只能在这组宏里面选一个套上。</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#二。枚举的作用："><span class="nav-number">2.</span> <span class="nav-text">二。枚举的作用：</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#增强程序的可读性，即：面向语义编程"><span class="nav-number">2.0.1.</span> <span class="nav-text">增强程序的可读性，即：面向语义编程</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#枚举类型的原理"><span class="nav-number">1.</span> <span class="nav-text">枚举类型的原理</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#枚举是一种”批量化定义”"><span class="nav-number">1.0.1.</span> <span class="nav-text">枚举是一种”批量化定义”</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#枚举的原理是”批量宏定义”而不是常量定义。"><span class="nav-number">1.0.2.</span> <span class="nav-text">枚举的原理是”批量宏定义”而不是常量定义。</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#一个枚举类相当于封装了一组有规律的宏"><span class="nav-number">1.0.3.</span> <span class="nav-text">一个枚举类相当于封装了一组有规律的宏</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#一个枚举类的实例变量只能在这组宏里面选一个套上。"><span class="nav-number">1.0.4.</span> <span class="nav-text">一个枚举类的实例变量只能在这组宏里面选一个套上。</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#枚举的作用："><span class="nav-number">2.</span> <span class="nav-text">枚举的作用：</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#增强程序的可读性，即：面向语义编程"><span class="nav-number">2.0.1.</span> <span class="nav-text">增强程序的可读性，即：面向语义编程</span></a></li></ol></li></ol></li></ol></div>
             
 
           </div>
