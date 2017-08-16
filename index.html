@@ -387,6 +387,136 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/08/16/指针和引用在语法层面存在的意义/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="RecXI">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/1.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="RecXI个人博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/08/16/指针和引用在语法层面存在的意义/" itemprop="url">指针和引用在语法层面存在的意义</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-08-16T12:20:27+08:00">
+                2017-08-16
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>这是现阶段的个人理解，不一定正确。</p>
+<p>C和C++在语法层面支持甚至依赖于指针，而Java在语法层面却没有指针<br>【注】其实Java本质上还是依赖于指针，封装屏蔽了这些底层细节。</p>
+<p>那么抛开底层本质，从语法层面的角度分析：为什么C，C++要<br>依赖指针（C++的引用同理）。</p>
+<h1 id="一。必须手动管理内存的地方"><a href="#一。必须手动管理内存的地方" class="headerlink" title="一。必须手动管理内存的地方"></a>一。必须手动管理内存的地方</h1><p>其实很多教材上也说了：C，C++给了开发者操控逻辑内存的自由，比如<br>动态内存管理。<br>动态申请内存空间这样的操作必须用指针（注意是必须）。<br>当然，这些必须的东西我们很熟悉，都是固定的语法。<br>但我们更关注指针在必须层面以外的还有什么存在的意义，这才是灵性编程的关键。</p>
+<h1 id="二。函数指针是一家"><a href="#二。函数指针是一家" class="headerlink" title="二。函数指针是一家"></a>二。函数指针是一家</h1><p>这是本文更加关注的一个点：<br>C，C++支持面向过程的范式，这样的范式离不开函数。<br>函数是个特殊的盒子，而指针、引用可以解决函数的特殊性带来的问题。</p>
+<p>函数的特殊性很多，这里简单举几点，不深究：<br>①函数被压栈以后是个独立的工作区间，有自己独立的变量空间。<br> 局部变量依附于对应函数。</p>
+<p>②函数默认为值传递，其实指针传递也属于值传递（传地址值），而引用传递属于实体传递<br>  值传递和实体传递的区别在于：是否为参数额外开辟了内存空间<br> 在值传递时，形参只是实参的副本。所以想要在函数中访问实参必须通过指针或者引用传递</p>
+<p>③函数返回值默认为值返回。<br>  要想返回实体，必须通过指针或者引用。<br>  而且这个返回的实体只能是全局变量，或者静态局部变量。<br>  非静态局部变量禁止被返回。</p>
+<p>而java是个纯粹的面向对象的语言，OOP范式用方法代替函数，而且GC的存在让开发者<br>不用手动管理内存，所以在语法层面完全可以扔掉指针。（再次强调抛开底层本质）</p>
+<p>不过初学时可能会疑惑：在Java中如何实现两数交换？<br>其实很简单，直接交换不用函数就行了嘛（手动滑稽）。或者你可以用OOP的方式：<br>封装成类，再调用方法实现。</p>
+<h1 id="三。总结："><a href="#三。总结：" class="headerlink" title="三。总结："></a>三。总结：</h1><p>java在语法层面可以完全抛弃指针，不影响任何实现。<br>而C，C++不能，①因为它们有很多必须使用指针的地方—比如动态内存管理<br>                ②另外：它们需要指针来解决函数的特殊性所带来的问题。</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/08/15/C-标准流重定向/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -540,7 +670,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives/">
-                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-count">3</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
