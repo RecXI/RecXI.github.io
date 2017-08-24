@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-08-24T02:59:01.916Z</updated>
+  <updated>2017-08-24T15:03:48.451Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -19,8 +19,8 @@
     <title>锟斤拷烫烫屯</title>
     <link href="http://yoursite.com/2017/08/24/%E9%94%9F%E6%96%A4%E6%8B%B7%E7%83%AB%E7%83%AB%E5%B1%AF/"/>
     <id>http://yoursite.com/2017/08/24/锟斤拷烫烫屯/</id>
-    <published>2017-08-24T02:59:01.000Z</published>
-    <updated>2017-08-24T02:59:01.916Z</updated>
+    <published>2017-08-24T15:03:48.000Z</published>
+    <updated>2017-08-24T15:03:48.451Z</updated>
     
     <summary type="html">
     
@@ -101,39 +101,6 @@
   </entry>
   
   <entry>
-    <title>枚举类型</title>
-    <link href="http://yoursite.com/2017/08/17/%E6%9E%9A%E4%B8%BE/"/>
-    <id>http://yoursite.com/2017/08/17/枚举/</id>
-    <published>2017-08-17T07:47:23.000Z</published>
-    <updated>2017-08-16T07:50:40.374Z</updated>
-    
-    <content type="html"><![CDATA[<p>枚举类型是学任何一门语言都会接触到的一个语法点。这个语法点在教材上出现得很突兀，使用频率不高。</p>
-<p>而且初学时，不容易get到它的应用场景，所以往往都选择跳过。（其实问题并不大，这不是一个很重要的语法点）</p>
-<p>但既然是通用语法的一部分，我们还是很有必要（闲得发慌）去探究一下它的原理与作用。</p>
-<h1 id="枚举类型的原理"><a href="#枚举类型的原理" class="headerlink" title="枚举类型的原理"></a>枚举类型的原理</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">以C++为例：</div><div class="line">enum 枚举名&#123; </div><div class="line">     标识符[=整型常数], </div><div class="line">     标识符[=整型常数], </div><div class="line">... </div><div class="line">    标识符[=整型常数]</div><div class="line">&#125; 枚举变量;</div></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">实验代码：</div><div class="line">typedef enum &#123;</div><div class="line">    down = 1,</div><div class="line">    right,</div><div class="line">    up,</div><div class="line">    left,</div><div class="line">&#125; Direction;</div><div class="line"></div><div class="line">//相当于把1,2两个整数分别赋给两个枚举变量</div><div class="line">Direction dir_d = down; </div><div class="line">Direction dir_r = right;</div></pre></td></tr></table></figure>
-<p>我们发现枚举变量与两个语法很像：<br>①宏定义 #define down 1  （不分配空间）<br>②整型常量 const int down = 1;   （分配空间）</p>
-<p>不管枚举常量的原理是哪一种，有一点是确定的：</p>
-<h3 id="枚举是一种”批量化定义”"><a href="#枚举是一种”批量化定义”" class="headerlink" title="枚举是一种”批量化定义”"></a>枚举是一种”批量化定义”</h3><p>宏与整型常量的区别主要在于内存空间的分配问题上，形式上很像</p>
-<p>我们通过另外一个实验可以大致确定：</p>
-<h3 id="枚举的原理是”批量宏定义”而不是常量定义。"><a href="#枚举的原理是”批量宏定义”而不是常量定义。" class="headerlink" title="枚举的原理是”批量宏定义”而不是常量定义。"></a>枚举的原理是”批量宏定义”而不是常量定义。</h3><h3 id="一个枚举类相当于封装了一组有规律的宏"><a href="#一个枚举类相当于封装了一组有规律的宏" class="headerlink" title="一个枚举类相当于封装了一组有规律的宏"></a>一个枚举类相当于封装了一组有规律的宏</h3><h3 id="一个枚举类的实例变量只能在这组宏里面选一个套上。"><a href="#一个枚举类的实例变量只能在这组宏里面选一个套上。" class="headerlink" title="一个枚举类的实例变量只能在这组宏里面选一个套上。"></a>一个枚举类的实例变量只能在这组宏里面选一个套上。</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">实验的思路是：查看数值改变后的错误信息：</div><div class="line"></div><div class="line">const_test = 2;  //整型常量</div><div class="line">macro_test = 2;	 //整型常量</div><div class="line">down = 2;        //枚举常量</div><div class="line"></div><div class="line">cout&lt;&lt;const_test&lt;&lt;endl;</div><div class="line">cout&lt;&lt;const_test&lt;&lt;endl;</div><div class="line">cout&lt;&lt;const_test&lt;&lt;endl;</div></pre></td></tr></table></figure>
-<p><img src="/2017/08/17/枚举/1.png" alt=""></p>
-<h1 id="枚举的作用："><a href="#枚举的作用：" class="headerlink" title="枚举的作用："></a>枚举的作用：</h1><h3 id="增强程序的可读性，即：面向语义编程"><a href="#增强程序的可读性，即：面向语义编程" class="headerlink" title="增强程序的可读性，即：面向语义编程"></a>增强程序的可读性，即：面向语义编程</h3>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;枚举类型是学任何一门语言都会接触到的一个语法点。这个语法点在教材上出现得很突兀，使用频率不高。&lt;/p&gt;
-&lt;p&gt;而且初学时，不容易get到它的应用场景，所以往往都选择跳过。（其实问题并不大，这不是一个很重要的语法点）&lt;/p&gt;
-&lt;p&gt;但既然是通用语法的一部分，我们还是很有必要（
-    
-    </summary>
-    
-    
-      <category term="通用基础语法" scheme="http://yoursite.com/tags/%E9%80%9A%E7%94%A8%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/"/>
-    
-  </entry>
-  
-  <entry>
     <title>指针和引用在语法层面存在的意义</title>
     <link href="http://yoursite.com/2017/08/16/%E6%8C%87%E9%92%88%E5%92%8C%E5%BC%95%E7%94%A8%E5%9C%A8%E8%AF%AD%E6%B3%95%E5%B1%82%E9%9D%A2%E5%AD%98%E5%9C%A8%E7%9A%84%E6%84%8F%E4%B9%89/"/>
     <id>http://yoursite.com/2017/08/16/指针和引用在语法层面存在的意义/</id>
@@ -158,29 +125,6 @@
       &lt;p&gt;这是现阶段的个人理解，不一定正确。&lt;/p&gt;
 &lt;p&gt;C和C++在语法层面支持甚至依赖于指针，而Java在语法层面却没有指针&lt;br&gt;【注】其实Java本质上还是依赖于指针，封装屏蔽了这些底层细节。&lt;/p&gt;
 &lt;p&gt;那么抛开底层本质，从语法层面的角度分析：为什么C，C++要&lt;br&gt;
-    
-    </summary>
-    
-      <category term="C++" scheme="http://yoursite.com/categories/C/"/>
-    
-    
-      <category term="C++基础语法" scheme="http://yoursite.com/tags/C-%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>C++标准流重定向</title>
-    <link href="http://yoursite.com/2017/08/15/C-%E6%A0%87%E5%87%86%E6%B5%81%E9%87%8D%E5%AE%9A%E5%90%91/"/>
-    <id>http://yoursite.com/2017/08/15/C-标准流重定向/</id>
-    <published>2017-08-15T15:03:22.000Z</published>
-    <updated>2017-08-16T07:32:27.043Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="标准输入-输出流的重定向"><a href="#标准输入-输出流的重定向" class="headerlink" title="标准输入/输出流的重定向"></a>标准输入/输出流的重定向</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div></pre></td><td class="code"><pre><div class="line">遵循&quot;借还原则&quot;的编程原则，在最后进行了重定向恢复。</div><div class="line"></div><div class="line">#include &lt;iostream&gt;</div><div class="line">#include &lt;fstream&gt;</div><div class="line">#include &lt;string&gt;</div><div class="line"> </div><div class="line">void f()</div><div class="line">&#123;</div><div class="line">    std::string line;</div><div class="line">    while(std::getline(std::cin, line))  //input from the file in.txt</div><div class="line">    &#123;</div><div class="line">        std::cout &lt;&lt; line &lt;&lt; &quot;\n&quot;;   //output to the file out.txt</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line">int main()</div><div class="line">&#123;</div><div class="line">    std::ifstream in(&quot;in.txt&quot;);</div><div class="line">    std::streambuf *cinbuf = std::cin.rdbuf(); //save old buf</div><div class="line">    std::cin.rdbuf(in.rdbuf()); //redirect std::cin to in.txt!</div><div class="line"> </div><div class="line">    std::ofstream out(&quot;out.txt&quot;);</div><div class="line">    std::streambuf *coutbuf = std::cout.rdbuf(); //save old buf</div><div class="line">    std::cout.rdbuf(out.rdbuf()); //redirect std::cout to out.txt!</div><div class="line"> </div><div class="line">    std::string word;</div><div class="line">    std::cin &gt;&gt; word;           //input from the file in.txt</div><div class="line">    std::cout &lt;&lt; word &lt;&lt; &quot;  &quot;;  //output to the file out.txt</div><div class="line"> </div><div class="line">    f(); //call function</div><div class="line"> </div><div class="line"> </div><div class="line">    std::cin.rdbuf(cinbuf);   //reset to standard input again</div><div class="line">    std::cout.rdbuf(coutbuf); //reset to standard output again</div><div class="line"> </div><div class="line">    std::cin &gt;&gt; word;   //input from the standard input</div><div class="line">    std::cout &lt;&lt; word;  //output to the standard input</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h1 id="扩展：标准错误-日志流的重定向"><a href="#扩展：标准错误-日志流的重定向" class="headerlink" title="扩展：标准错误,日志流的重定向"></a>扩展：标准错误,日志流的重定向</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">其实原理是一样的，这里简化书写，并省略借还原则：</div><div class="line"></div><div class="line">ofstream err(&quot;err.txt&quot;);</div><div class="line">cerr.rdbuf(err.rdbuf()); //redirect std::cout to out.txt!</div><div class="line"></div><div class="line">ofstream logger(&quot;log.txt&quot;);</div><div class="line">clog.rdbuf(logger.rdbuf()); //redirect std::cout to out.txt!</div><div class="line"></div><div class="line">cerr&lt;&lt;&quot;cerr&quot;&lt;&lt;endl;</div><div class="line">clog&lt;&lt;&quot;clog&quot;&lt;&lt;endl;</div></pre></td></tr></table></figure>]]></content>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;标准输入-输出流的重定向&quot;&gt;&lt;a href=&quot;#标准输入-输出流的重定向&quot; class=&quot;headerlink&quot; title=&quot;标准输入/输出流的重定向&quot;&gt;&lt;/a&gt;标准输入/输出流的重定向&lt;/h1&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;
     
     </summary>
     
