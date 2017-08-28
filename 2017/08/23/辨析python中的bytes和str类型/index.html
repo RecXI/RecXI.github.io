@@ -96,18 +96,18 @@
 
 
 
-<meta name="description" content="一篇描述该问题的精彩博文：被引用博文   下面是一些本人的理解，对这篇博文进行补充  引用一句话：编码问题号称编程领域的幽灵，如果你不弄懂它，它会折磨你一辈子  【注】下面的讨论建立在这个前提之上：bytes可解码为文本，非多媒体二进制序列。  底层思维和面向对象思维相结合即可理解两者差异：1. 如果仅仅有底层思维，那么比较容易陷入一个逻辑陷阱：      bytes和str没有区别，因为本质上">
+<meta name="description" content="一篇描述该问题的精彩博文：被引用博文   下面是一些本人的理解，对这篇博文进行补充  引用一句话：编码问题号称编程领域的幽灵，如果你不弄懂它，它会折磨你一辈子  【注】下面的讨论建立在这个前提之上：bytes可解码为文本，非多媒体二进制序列。  底层思维和面向对象思维相结合：如果仅仅有底层思维（这里指字符编码思维），那么比较容易陷入一个逻辑陷阱：相同字符对应的bytes和str没有区别，因为本质">
 <meta name="keywords" content="python,字符编码">
 <meta property="og:type" content="article">
-<meta property="og:title" content="辨析python中的bytes和str类型">
+<meta property="og:title" content="辨析python3.X中的bytes和str类型">
 <meta property="og:url" content="http://yoursite.com/2017/08/23/辨析python中的bytes和str类型/index.html">
 <meta property="og:site_name" content="RecXI个人博客">
-<meta property="og:description" content="一篇描述该问题的精彩博文：被引用博文   下面是一些本人的理解，对这篇博文进行补充  引用一句话：编码问题号称编程领域的幽灵，如果你不弄懂它，它会折磨你一辈子  【注】下面的讨论建立在这个前提之上：bytes可解码为文本，非多媒体二进制序列。  底层思维和面向对象思维相结合即可理解两者差异：1. 如果仅仅有底层思维，那么比较容易陷入一个逻辑陷阱：      bytes和str没有区别，因为本质上">
+<meta property="og:description" content="一篇描述该问题的精彩博文：被引用博文   下面是一些本人的理解，对这篇博文进行补充  引用一句话：编码问题号称编程领域的幽灵，如果你不弄懂它，它会折磨你一辈子  【注】下面的讨论建立在这个前提之上：bytes可解码为文本，非多媒体二进制序列。  底层思维和面向对象思维相结合：如果仅仅有底层思维（这里指字符编码思维），那么比较容易陷入一个逻辑陷阱：相同字符对应的bytes和str没有区别，因为本质">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-08-24T03:07:50.064Z">
+<meta property="og:updated_time" content="2017-08-27T13:15:27.984Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="辨析python中的bytes和str类型">
-<meta name="twitter:description" content="一篇描述该问题的精彩博文：被引用博文   下面是一些本人的理解，对这篇博文进行补充  引用一句话：编码问题号称编程领域的幽灵，如果你不弄懂它，它会折磨你一辈子  【注】下面的讨论建立在这个前提之上：bytes可解码为文本，非多媒体二进制序列。  底层思维和面向对象思维相结合即可理解两者差异：1. 如果仅仅有底层思维，那么比较容易陷入一个逻辑陷阱：      bytes和str没有区别，因为本质上">
+<meta name="twitter:title" content="辨析python3.X中的bytes和str类型">
+<meta name="twitter:description" content="一篇描述该问题的精彩博文：被引用博文   下面是一些本人的理解，对这篇博文进行补充  引用一句话：编码问题号称编程领域的幽灵，如果你不弄懂它，它会折磨你一辈子  【注】下面的讨论建立在这个前提之上：bytes可解码为文本，非多媒体二进制序列。  底层思维和面向对象思维相结合：如果仅仅有底层思维（这里指字符编码思维），那么比较容易陷入一个逻辑陷阱：相同字符对应的bytes和str没有区别，因为本质">
 
 
 
@@ -142,7 +142,7 @@
 
 
 
-  <title>辨析python中的bytes和str类型 | RecXI个人博客</title>
+  <title>辨析python3.X中的bytes和str类型 | RecXI个人博客</title>
   
 
 
@@ -286,7 +286,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">辨析python中的bytes和str类型</h1>
+          <h1 class="post-title" itemprop="name headline">辨析python3.X中的bytes和str类型</h1>
         
 
         <div class="post-meta">
@@ -367,43 +367,19 @@
 </blockquote>
 <p><strong>【注】</strong>下面的讨论建立在这个前提之上：bytes可解码为文本，非多媒体二进制序列。</p>
 <hr>
-<h1 id="底层思维和面向对象思维相结合即可理解两者差异："><a href="#底层思维和面向对象思维相结合即可理解两者差异：" class="headerlink" title="底层思维和面向对象思维相结合即可理解两者差异："></a>底层思维和面向对象思维相结合即可理解两者差异：</h1><pre><code>1. 如果仅仅有底层思维，那么比较容易陷入一个逻辑陷阱：
+<h2 id="底层思维和面向对象思维相结合："><a href="#底层思维和面向对象思维相结合：" class="headerlink" title="底层思维和面向对象思维相结合："></a>底层思维和面向对象思维相结合：</h2><p>如果仅仅有<strong>底层思维</strong>（<em>这里指字符编码思维</em>），那么比较容易陷入一个逻辑陷阱：相同字符对应的bytes和str没有区别，因为本质上有着相同的二进制序列。</p>
+<p>其实这种理解从编码角度来讲并没有问题，但是这种理解片面了，因为没有加上<strong>面向对象的思维</strong>：<em>对象是数据的容器，不同类型的对象封装着不同的成员变量和成员方法</em>。<br>而bytes和str正是不同类型的对象。无论是str对象还是bytes对象，本身的二进制序列只是封装在容器中的一部分，<em>局部相同不代表整体相同</em></p>
+<p>举个例子：”py”，b”py”。假设内部采用的编码集一致，假设都为：0101101010100011，看上去完全一样，但这只是部分相同。</p>
+<ul>
+<li>“py”是字符串，封装了encode方法，</li>
+<li>b”py”是字节序列，封装了decode方法<br>从它两封装着不同的方法就可以看出：他们是不同类型的对象。所以在很多场景下无法兼容，必须转换。</li>
+</ul>
+<hr>
+<h2 id="str和bytes相互转换："><a href="#str和bytes相互转换：" class="headerlink" title="str和bytes相互转换："></a>str和bytes相互转换：</h2><p>理解了差异之后，转换就显得很自然了–无非就是不同类型对象之间的转换<br><em>str转换为bytes的过程称为<strong>编码</strong></em><br><em>bytes转换为str的过程称为<strong>解码/译码</strong></em></p>
+<p>转换的方式有两种：</p>
+<h3 id="1-对象式的：decode，encode"><a href="#1-对象式的：decode，encode" class="headerlink" title="1.对象式的：decode，encode"></a>1.对象式的：decode，encode</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">s1 = u&quot;中文&quot;</div><div class="line">#将Unicode重新编码为GBK</div><div class="line">b1 = s1.encode(&quot;gbk&quot;)</div><div class="line">s2 = b1.decode(&quot;gbk&quot;)</div></pre></td></tr></table></figure>
+<h3 id="2-过程式的：str-byte-encoding-bytes-str-encoding"><a href="#2-过程式的：str-byte-encoding-bytes-str-encoding" class="headerlink" title="2.过程式的：str(byte,encoding=),bytes(str,encoding=)"></a>2.过程式的：str(byte,encoding=),bytes(str,encoding=)</h3><p><em>【注】两个的位置参数都为encoding，并没有decoding</em><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">s1 = &quot;中&quot;</div><div class="line">b1 = bytes(s1,encoding=&quot;utf-8&quot;)</div><div class="line">s2 = str(b1,encoding=&quot;utf-8&quot;)</div><div class="line">s1 == s2</div></pre></td></tr></table></figure></p>
 
-    bytes和str没有区别，因为本质上都是二进制序列。
-
-2. 其实这种理解并没有问题，但是这种理解片面了，因为没有加上面向对象的思维：
-
-    bytes和str是不同类型的对象。
-
-    对象是数据的容器。封装着不同的属性和方法
-
-    字符串/字节序列  本身的二进制序列只是封装在容器中的一部分
-
-3. 举个例子：&quot;py&quot;，b&quot;py&quot;。假设内部的编码模式一致(UTF-8,ASCII,GBK。。whatever)，假设为：0101101010100011
-
-    看上去完全一样，但这只是部分相同。
-
-    &quot;py&quot;是字符串，封装了encode方法，
-
-    b&quot;py&quot;是字节，封装了decode方法
-
-    仅仅从它两封装着不同的方法就可以看出：他们是不同类型的对象。所以在很多场景下无法兼容，必须转换。
-</code></pre><h1 id="str和bytes相互转换："><a href="#str和bytes相互转换：" class="headerlink" title="str和bytes相互转换："></a>str和bytes相互转换：</h1><pre><code>1. 理解了差异之后，转换就显得没有那么僵硬了
-
-    ---无非就是不同类型对象之间的转换（最开始我完全不能理解为什么两个一样的东西要进行转换）
-
-    ---str转换为bytes的过程称为编码
-
-       bytes转换为str的过程称为解码/译码
-
-2. 转换的方式有两种：
-
-    1）对象式的：decode，encode
-</code></pre><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">s1 = u&quot;中文&quot;</div><div class="line">#将Unicode重新编码为GBK</div><div class="line">b1 = s1.encode(&quot;gbk&quot;)</div><div class="line">s2 = b1.decode(&quot;gbk&quot;)</div></pre></td></tr></table></figure>
-<pre><code>2)过程式的：str(byte,encoding=),bytes(str,encoding=) 
-
-        注意到两个的位置参数都为encoding，并没有decoding
-</code></pre><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">s1 = &quot;中&quot;</div><div class="line">b1 = bytes(s1,encoding=&quot;utf-8&quot;)</div><div class="line">s2 = str(b1,encoding=&quot;utf-8&quot;)</div><div class="line">s1 == s2</div></pre></td></tr></table></figure>
       
     </div>
     
@@ -524,7 +500,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives/">
-                <span class="site-state-item-count">3</span>
+                <span class="site-state-item-count">6</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -546,7 +522,7 @@
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">3</span>
+                <span class="site-state-item-count">5</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -623,7 +599,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#底层思维和面向对象思维相结合即可理解两者差异："><span class="nav-number">1.</span> <span class="nav-text">底层思维和面向对象思维相结合即可理解两者差异：</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#str和bytes相互转换："><span class="nav-number">2.</span> <span class="nav-text">str和bytes相互转换：</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#底层思维和面向对象思维相结合："><span class="nav-number">1.</span> <span class="nav-text">底层思维和面向对象思维相结合：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#str和bytes相互转换："><span class="nav-number">2.</span> <span class="nav-text">str和bytes相互转换：</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-对象式的：decode，encode"><span class="nav-number">2.1.</span> <span class="nav-text">1.对象式的：decode，encode</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-过程式的：str-byte-encoding-bytes-str-encoding"><span class="nav-number">2.2.</span> <span class="nav-text">2.过程式的：str(byte,encoding=),bytes(str,encoding=)</span></a></li></ol></li></ol></div>
             
 
           </div>
