@@ -78,7 +78,7 @@
 <link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="Linux,远程," />
 
 
 
@@ -96,17 +96,18 @@
 
 
 
-<meta name="description" content="面向显示屏编程">
+<meta name="description" content="远程登录以后，你就可以”为所欲为”了，这里介绍一个最常用的场景：本地与虚拟机互传文件方法有很多，这里介绍三个：  Xftp  lrzsz  scp  Xftp的使用这个主要是配合Xshell同时下载Xshell和Xftp，Ctrl+Alt+F就可以选择文件的互传【注】虚拟机/云服务器通用–只要相互间能ping得通。 lrzsz的使用先安装：sudo apt-get install lrzsz安装之">
+<meta name="keywords" content="Linux,远程">
 <meta property="og:type" content="article">
 <meta property="og:title" content="SSH远程连接本地虚拟机(三)：远程上传或下载文件">
 <meta property="og:url" content="http://yoursite.com/2017/08/27/SSH远程连接本地虚拟机-三-：远程上传或下载文件/index.html">
 <meta property="og:site_name" content="RecXI个人博客">
-<meta property="og:description" content="面向显示屏编程">
+<meta property="og:description" content="远程登录以后，你就可以”为所欲为”了，这里介绍一个最常用的场景：本地与虚拟机互传文件方法有很多，这里介绍三个：  Xftp  lrzsz  scp  Xftp的使用这个主要是配合Xshell同时下载Xshell和Xftp，Ctrl+Alt+F就可以选择文件的互传【注】虚拟机/云服务器通用–只要相互间能ping得通。 lrzsz的使用先安装：sudo apt-get install lrzsz安装之">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-08-27T14:11:03.973Z">
+<meta property="og:updated_time" content="2017-08-28T04:20:11.147Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="SSH远程连接本地虚拟机(三)：远程上传或下载文件">
-<meta name="twitter:description" content="面向显示屏编程">
+<meta name="twitter:description" content="远程登录以后，你就可以”为所欲为”了，这里介绍一个最常用的场景：本地与虚拟机互传文件方法有很多，这里介绍三个：  Xftp  lrzsz  scp  Xftp的使用这个主要是配合Xshell同时下载Xshell和Xftp，Ctrl+Alt+F就可以选择文件的互传【注】虚拟机/云服务器通用–只要相互间能ping得通。 lrzsz的使用先安装：sudo apt-get install lrzsz安装之">
 
 
 
@@ -335,7 +336,26 @@
       
 
       
-        
+        <p>远程登录以后，你就可以”为所欲为”了，这里介绍一个最常用的场景：<br><strong>本地与虚拟机互传文件</strong><br>方法有很多，这里介绍三个：</p>
+<ul>
+<li>Xftp </li>
+<li>lrzsz </li>
+<li>scp</li>
+</ul>
+<h2 id="Xftp的使用"><a href="#Xftp的使用" class="headerlink" title="Xftp的使用"></a>Xftp的使用</h2><p>这个主要是配合Xshell<br>同时下载Xshell和Xftp，Ctrl+Alt+F就可以选择文件的互传<br><em>【注】虚拟机/云服务器通用–只要相互间能ping得通。</em></p>
+<h2 id="lrzsz的使用"><a href="#lrzsz的使用" class="headerlink" title="lrzsz的使用"></a>lrzsz的使用</h2><p>先安装：<br><code>sudo apt-get install lrzsz</code><br>安装之后，便可以使用rz和sz指令：<br><code>sz 【file】 ---&gt;可将服务器的文件下载到本地</code><br><code>rz 【file】 ---&gt;可将本地的文件上传到服务器</code></p>
+<h2 id="scp的使用"><a href="#scp的使用" class="headerlink" title="scp的使用"></a>scp的使用</h2><p>scp是cp指令的远程版本，所以用法类似</p>
+<ol>
+<li><p>从服务器上下载文件<br><code>scp username@servername:/path/filename /var/www/local_dir（本地目录）</code></p>
+</li>
+<li><p>上传本地文件到服务器<br><code>scp /path/filename username@servername:/path</code></p>
+</li>
+<li><p>从服务器下载整个目录<br><code>scp -r username@servername:/var/www/remote_dir/（远程目录）/var/www/local_dir（本地目录）</code></p>
+</li>
+<li><p>上传目录到服务器<br><code>scp  -r local_dir username@servername:remote_dir</code></p>
+</li>
+</ol>
+
       
     </div>
     
@@ -349,6 +369,14 @@
     
 
     <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Linux/" rel="tag"># Linux</a>
+          
+            <a href="/tags/远程/" rel="tag"># 远程</a>
+          
+        </div>
       
 
       
@@ -419,8 +447,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/1.jpg"
@@ -524,6 +561,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Xftp的使用"><span class="nav-number">1.</span> <span class="nav-text">Xftp的使用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#lrzsz的使用"><span class="nav-number">2.</span> <span class="nav-text">lrzsz的使用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#scp的使用"><span class="nav-number">3.</span> <span class="nav-text">scp的使用</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       

@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-08-27T14:11:03.973Z</updated>
+  <updated>2017-08-28T04:20:11.147Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -20,12 +20,44 @@
     <link href="http://yoursite.com/2017/08/27/SSH%E8%BF%9C%E7%A8%8B%E8%BF%9E%E6%8E%A5%E6%9C%AC%E5%9C%B0%E8%99%9A%E6%8B%9F%E6%9C%BA-%E4%B8%89-%EF%BC%9A%E8%BF%9C%E7%A8%8B%E4%B8%8A%E4%BC%A0%E6%88%96%E4%B8%8B%E8%BD%BD%E6%96%87%E4%BB%B6/"/>
     <id>http://yoursite.com/2017/08/27/SSH远程连接本地虚拟机-三-：远程上传或下载文件/</id>
     <published>2017-08-27T14:11:03.000Z</published>
-    <updated>2017-08-27T14:11:03.973Z</updated>
+    <updated>2017-08-28T04:20:11.147Z</updated>
+    
+    <content type="html"><![CDATA[<p>远程登录以后，你就可以”为所欲为”了，这里介绍一个最常用的场景：<br><strong>本地与虚拟机互传文件</strong><br>方法有很多，这里介绍三个：</p>
+<ul>
+<li>Xftp </li>
+<li>lrzsz </li>
+<li>scp</li>
+</ul>
+<h2 id="Xftp的使用"><a href="#Xftp的使用" class="headerlink" title="Xftp的使用"></a>Xftp的使用</h2><p>这个主要是配合Xshell<br>同时下载Xshell和Xftp，Ctrl+Alt+F就可以选择文件的互传<br><em>【注】虚拟机/云服务器通用–只要相互间能ping得通。</em></p>
+<h2 id="lrzsz的使用"><a href="#lrzsz的使用" class="headerlink" title="lrzsz的使用"></a>lrzsz的使用</h2><p>先安装：<br><code>sudo apt-get install lrzsz</code><br>安装之后，便可以使用rz和sz指令：<br><code>sz 【file】 ---&gt;可将服务器的文件下载到本地</code><br><code>rz 【file】 ---&gt;可将本地的文件上传到服务器</code></p>
+<h2 id="scp的使用"><a href="#scp的使用" class="headerlink" title="scp的使用"></a>scp的使用</h2><p>scp是cp指令的远程版本，所以用法类似</p>
+<ol>
+<li><p>从服务器上下载文件<br><code>scp username@servername:/path/filename /var/www/local_dir（本地目录）</code></p>
+</li>
+<li><p>上传本地文件到服务器<br><code>scp /path/filename username@servername:/path</code></p>
+</li>
+<li><p>从服务器下载整个目录<br><code>scp -r username@servername:/var/www/remote_dir/（远程目录）/var/www/local_dir（本地目录）</code></p>
+</li>
+<li><p>上传目录到服务器<br><code>scp  -r local_dir username@servername:remote_dir</code></p>
+</li>
+</ol>
+]]></content>
     
     <summary type="html">
     
+      &lt;p&gt;远程登录以后，你就可以”为所欲为”了，这里介绍一个最常用的场景：&lt;br&gt;&lt;strong&gt;本地与虚拟机互传文件&lt;/strong&gt;&lt;br&gt;方法有很多，这里介绍三个：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Xftp &lt;/li&gt;
+&lt;li&gt;lrzsz &lt;/li&gt;
+&lt;li&gt;scp&lt;/li&gt;
+&lt;/u
+    
     </summary>
     
+    
+      <category term="Linux" scheme="http://yoursite.com/tags/Linux/"/>
+    
+      <category term="远程" scheme="http://yoursite.com/tags/%E8%BF%9C%E7%A8%8B/"/>
     
   </entry>
   
@@ -34,7 +66,7 @@
     <link href="http://yoursite.com/2017/08/27/SSH%E8%BF%9C%E7%A8%8B%E8%BF%9E%E6%8E%A5%E6%9C%AC%E5%9C%B0%E8%99%9A%E6%8B%9F%E6%9C%BA-%E4%BA%8C-%EF%BC%9A%E4%BD%BF%E7%94%A8Xshell%E6%88%96%E8%80%85Git-Bash/"/>
     <id>http://yoursite.com/2017/08/27/SSH远程连接本地虚拟机-二-：使用Xshell或者Git-Bash/</id>
     <published>2017-08-27T14:09:57.000Z</published>
-    <updated>2017-08-27T16:14:28.659Z</updated>
+    <updated>2017-08-28T03:59:46.732Z</updated>
     
     <content type="html"><![CDATA[<h2 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h2><p>Windows要远程连接Linux主机，有两种基本的思路：</p>
 <ol>
@@ -53,6 +85,7 @@
 <p><strong>本文主要介绍Xshell 与 Git Bash</strong></p>
 <h2 id="Xshell的使用"><a href="#Xshell的使用" class="headerlink" title="Xshell的使用"></a>Xshell的使用</h2><h3 id="获取虚拟机ip地址"><a href="#获取虚拟机ip地址" class="headerlink" title="获取虚拟机ip地址"></a>获取虚拟机ip地址</h3><p>命令:<br><code>ifconfig</code><br>定位inet addr，拿到ip地址</p>
 <h3 id="配置并建立Xshell会话"><a href="#配置并建立Xshell会话" class="headerlink" title="配置并建立Xshell会话"></a>配置并建立Xshell会话</h3><p>主机填入刚才拿到的ip地址<br><img src="/2017/08/27/SSH远程连接本地虚拟机-二-：使用Xshell或者Git-Bash/1.jpg" alt="1"><br>建立用户身份认证：用户名填root，密码填你ubuntu的root登录密码<br><img src="/2017/08/27/SSH远程连接本地虚拟机-二-：使用Xshell或者Git-Bash/2.jpg" alt="2"><br>连接成功，以后打开该会话会自动连接：<br><img src="/2017/08/27/SSH远程连接本地虚拟机-二-：使用Xshell或者Git-Bash/3.png" alt="3"></p>
+<h2 id="Git-Bash的使用"><a href="#Git-Bash的使用" class="headerlink" title="Git Bash的使用"></a>Git Bash的使用</h2><p>Git Bash基于MinGW(和Cygwin一样是类Unix环境)<br>主要目的是用于使用Git相关指令，但因为自身运行在类Unix环境上，本身又是Bash Shell，很多Linux的指令都能用（包括ssh）。<br>使用方法就很简单了，就当做是Linux的Bash Shell来用就行了。<br>打开Git Bash，键入命令，输入密码即可登录：<br><code>ssh username@hostname</code><br><strong>其中username填欲登录Linux账号，hostname直接填虚拟机ip就行</strong></p>
 ]]></content>
     
     <summary type="html">
