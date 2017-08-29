@@ -96,18 +96,18 @@
 
 
 
-<meta name="description" content="远程登录以后，你就可以”为所欲为”了，这里介绍一个最常用的场景：本地与虚拟机互传文件方法有很多，这里介绍三个：  Xftp  lrzsz  scp  Xftp的使用这个主要是配合Xshell同时下载Xshell和Xftp，Ctrl+Alt+F就可以选择文件的互传【注】虚拟机/云服务器通用–只要相互间能ping得通。 lrzsz的使用先安装：sudo apt-get install lrzsz安装之">
+<meta name="description" content="远程登录以后，你就可以”为所欲为”了，这里介绍一个最常用的场景：本地与虚拟机互传文件方法有很多，这里介绍三个：  Xftp  lrzsz  scp  Xftp的使用  这个主要是配合Xshell 同时下载Xshell和Xftp，Ctrl+Alt+F就可以选择文件的互传 【注】虚拟机/云服务器通用--只要相互间能ping得通。">
 <meta name="keywords" content="Linux,远程">
 <meta property="og:type" content="article">
 <meta property="og:title" content="SSH远程连接本地虚拟机(三)：远程上传或下载文件">
 <meta property="og:url" content="http://yoursite.com/2017/08/27/SSH远程连接本地虚拟机-三-：远程上传或下载文件/index.html">
 <meta property="og:site_name" content="RecXI个人博客">
-<meta property="og:description" content="远程登录以后，你就可以”为所欲为”了，这里介绍一个最常用的场景：本地与虚拟机互传文件方法有很多，这里介绍三个：  Xftp  lrzsz  scp  Xftp的使用这个主要是配合Xshell同时下载Xshell和Xftp，Ctrl+Alt+F就可以选择文件的互传【注】虚拟机/云服务器通用–只要相互间能ping得通。 lrzsz的使用先安装：sudo apt-get install lrzsz安装之">
+<meta property="og:description" content="远程登录以后，你就可以”为所欲为”了，这里介绍一个最常用的场景：本地与虚拟机互传文件方法有很多，这里介绍三个：  Xftp  lrzsz  scp  Xftp的使用  这个主要是配合Xshell 同时下载Xshell和Xftp，Ctrl+Alt+F就可以选择文件的互传 【注】虚拟机/云服务器通用--只要相互间能ping得通。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-08-28T04:20:11.147Z">
+<meta property="og:updated_time" content="2017-08-29T03:07:04.120Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="SSH远程连接本地虚拟机(三)：远程上传或下载文件">
-<meta name="twitter:description" content="远程登录以后，你就可以”为所欲为”了，这里介绍一个最常用的场景：本地与虚拟机互传文件方法有很多，这里介绍三个：  Xftp  lrzsz  scp  Xftp的使用这个主要是配合Xshell同时下载Xshell和Xftp，Ctrl+Alt+F就可以选择文件的互传【注】虚拟机/云服务器通用–只要相互间能ping得通。 lrzsz的使用先安装：sudo apt-get install lrzsz安装之">
+<meta name="twitter:description" content="远程登录以后，你就可以”为所欲为”了，这里介绍一个最常用的场景：本地与虚拟机互传文件方法有很多，这里介绍三个：  Xftp  lrzsz  scp  Xftp的使用  这个主要是配合Xshell 同时下载Xshell和Xftp，Ctrl+Alt+F就可以选择文件的互传 【注】虚拟机/云服务器通用--只要相互间能ping得通。">
 
 
 
@@ -342,9 +342,17 @@
 <li>lrzsz </li>
 <li>scp</li>
 </ul>
-<h2 id="Xftp的使用"><a href="#Xftp的使用" class="headerlink" title="Xftp的使用"></a>Xftp的使用</h2><p>这个主要是配合Xshell<br>同时下载Xshell和Xftp，Ctrl+Alt+F就可以选择文件的互传<br><em>【注】虚拟机/云服务器通用–只要相互间能ping得通。</em></p>
-<h2 id="lrzsz的使用"><a href="#lrzsz的使用" class="headerlink" title="lrzsz的使用"></a>lrzsz的使用</h2><p>先安装：<br><code>sudo apt-get install lrzsz</code><br>安装之后，便可以使用rz和sz指令：<br><code>sz 【file】 ---&gt;可将服务器的文件下载到本地</code><br><code>rz 【file】 ---&gt;可将本地的文件上传到服务器</code></p>
-<h2 id="scp的使用"><a href="#scp的使用" class="headerlink" title="scp的使用"></a>scp的使用</h2><p>scp是cp指令的远程版本，所以用法类似</p>
+<div class="note info"><h2 id="Xftp的使用"><a href="#Xftp的使用" class="headerlink" title="Xftp的使用"></a>Xftp的使用</h2></div>
+
+这个主要是配合Xshell
+同时下载Xshell和Xftp，Ctrl+Alt+F就可以选择文件的互传
+【注】虚拟机/云服务器通用--只要相互间能ping得通。
+
+<a id="more"></a>
+<div class="note info"><h2 id="lrzsz的使用"><a href="#lrzsz的使用" class="headerlink" title="lrzsz的使用"></a>lrzsz的使用</h2></div>
+<p>先安装：<br><code>sudo apt-get install lrzsz</code><br>安装之后，便可以使用rz和sz指令：<br><code>sz 【file】 ---&gt;可将服务器的文件下载到本地</code><br><code>rz 【file】 ---&gt;可将本地的文件上传到服务器</code></p>
+<div class="note info"><h2 id="scp的使用"><a href="#scp的使用" class="headerlink" title="scp的使用"></a>scp的使用</h2></div>
+<p>scp是cp指令的远程版本，所以用法类似</p>
 <ol>
 <li><p>从服务器上下载文件<br><code>scp username@servername:/path/filename /var/www/local_dir（本地目录）</code></p>
 </li>
@@ -623,6 +631,15 @@
 
 
 
+  <script type="text/javascript">
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//tajs.qq.com/stats?sId=63564139";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
 
 
 
@@ -658,6 +675,8 @@
   
 
 
+  
+
 
 
 
@@ -685,6 +704,9 @@
 
   
   <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+  
+  <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
 
 
   

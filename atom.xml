@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-08-28T04:20:11.147Z</updated>
+  <updated>2017-08-29T03:07:04.120Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://yoursite.com/2017/08/27/SSH%E8%BF%9C%E7%A8%8B%E8%BF%9E%E6%8E%A5%E6%9C%AC%E5%9C%B0%E8%99%9A%E6%8B%9F%E6%9C%BA-%E4%B8%89-%EF%BC%9A%E8%BF%9C%E7%A8%8B%E4%B8%8A%E4%BC%A0%E6%88%96%E4%B8%8B%E8%BD%BD%E6%96%87%E4%BB%B6/"/>
     <id>http://yoursite.com/2017/08/27/SSH远程连接本地虚拟机-三-：远程上传或下载文件/</id>
     <published>2017-08-27T14:11:03.000Z</published>
-    <updated>2017-08-28T04:20:11.147Z</updated>
+    <updated>2017-08-29T03:07:04.120Z</updated>
     
     <content type="html"><![CDATA[<p>远程登录以后，你就可以”为所欲为”了，这里介绍一个最常用的场景：<br><strong>本地与虚拟机互传文件</strong><br>方法有很多，这里介绍三个：</p>
 <ul>
@@ -28,9 +28,17 @@
 <li>lrzsz </li>
 <li>scp</li>
 </ul>
-<h2 id="Xftp的使用"><a href="#Xftp的使用" class="headerlink" title="Xftp的使用"></a>Xftp的使用</h2><p>这个主要是配合Xshell<br>同时下载Xshell和Xftp，Ctrl+Alt+F就可以选择文件的互传<br><em>【注】虚拟机/云服务器通用–只要相互间能ping得通。</em></p>
-<h2 id="lrzsz的使用"><a href="#lrzsz的使用" class="headerlink" title="lrzsz的使用"></a>lrzsz的使用</h2><p>先安装：<br><code>sudo apt-get install lrzsz</code><br>安装之后，便可以使用rz和sz指令：<br><code>sz 【file】 ---&gt;可将服务器的文件下载到本地</code><br><code>rz 【file】 ---&gt;可将本地的文件上传到服务器</code></p>
-<h2 id="scp的使用"><a href="#scp的使用" class="headerlink" title="scp的使用"></a>scp的使用</h2><p>scp是cp指令的远程版本，所以用法类似</p>
+<div class="note info"><h2 id="Xftp的使用"><a href="#Xftp的使用" class="headerlink" title="Xftp的使用"></a>Xftp的使用</h2></div>
+
+这个主要是配合Xshell
+同时下载Xshell和Xftp，Ctrl+Alt+F就可以选择文件的互传
+【注】虚拟机/云服务器通用--只要相互间能ping得通。
+
+<a id="more"></a>
+<div class="note info"><h2 id="lrzsz的使用"><a href="#lrzsz的使用" class="headerlink" title="lrzsz的使用"></a>lrzsz的使用</h2></div>
+<p>先安装：<br><code>sudo apt-get install lrzsz</code><br>安装之后，便可以使用rz和sz指令：<br><code>sz 【file】 ---&gt;可将服务器的文件下载到本地</code><br><code>rz 【file】 ---&gt;可将本地的文件上传到服务器</code></p>
+<div class="note info"><h2 id="scp的使用"><a href="#scp的使用" class="headerlink" title="scp的使用"></a>scp的使用</h2></div>
+<p>scp是cp指令的远程版本，所以用法类似</p>
 <ol>
 <li><p>从服务器上下载文件<br><code>scp username@servername:/path/filename /var/www/local_dir（本地目录）</code></p>
 </li>
@@ -50,7 +58,12 @@
 &lt;li&gt;Xftp &lt;/li&gt;
 &lt;li&gt;lrzsz &lt;/li&gt;
 &lt;li&gt;scp&lt;/li&gt;
-&lt;/u
+&lt;/ul&gt;
+&lt;div class=&quot;note info&quot;&gt;&lt;h2 id=&quot;Xftp的使用&quot;&gt;&lt;a href=&quot;#Xftp的使用&quot; class=&quot;headerlink&quot; title=&quot;Xftp的使用&quot;&gt;&lt;/a&gt;Xftp的使用&lt;/h2&gt;&lt;/div&gt;
+
+这个主要是配合Xshell
+同时下载Xshell和Xftp，Ctrl+Alt+F就可以选择文件的互传
+【注】虚拟机/云服务器通用--只要相互间能ping得通。
     
     </summary>
     
