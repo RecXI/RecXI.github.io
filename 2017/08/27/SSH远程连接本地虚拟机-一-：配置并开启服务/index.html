@@ -96,19 +96,19 @@
 
 
 
-<meta name="description" content="环境：本机：Win7 　　虚拟机：Ubuntu 16.04  本机启动Telnet服务首先打开Telnet功能进入控制面板-&amp;gt;程序和功能-&amp;gt;打开或关闭Windows功能选中Telnet服务器、Telnet客户端并打开这两项功能 开启Telnet服务命令行下输入：net start Telnet  虚拟机配置SSH服务检查SSHbash下输入命令:service ssh出现unrecon">
+<meta name="description" content="环境：本机：Win7 　　虚拟机：Ubuntu 16.04  本机启动Telnet服务首先打开Telnet功能进入控制面板-&amp;gt;程序和功能-&amp;gt;打开或关闭Windows功能选中Telnet服务器、Telnet客户端并打开这两项功能 开启Telnet服务命令行下输入：net start Telnet">
 <meta name="keywords" content="Linux,远程">
 <meta property="og:type" content="article">
 <meta property="og:title" content="SSH远程连接本地虚拟机(一)：配置并开启服务">
 <meta property="og:url" content="http://yoursite.com/2017/08/27/SSH远程连接本地虚拟机-一-：配置并开启服务/index.html">
 <meta property="og:site_name" content="RecXI个人博客">
-<meta property="og:description" content="环境：本机：Win7 　　虚拟机：Ubuntu 16.04  本机启动Telnet服务首先打开Telnet功能进入控制面板-&amp;gt;程序和功能-&amp;gt;打开或关闭Windows功能选中Telnet服务器、Telnet客户端并打开这两项功能 开启Telnet服务命令行下输入：net start Telnet  虚拟机配置SSH服务检查SSHbash下输入命令:service ssh出现unrecon">
+<meta property="og:description" content="环境：本机：Win7 　　虚拟机：Ubuntu 16.04  本机启动Telnet服务首先打开Telnet功能进入控制面板-&amp;gt;程序和功能-&amp;gt;打开或关闭Windows功能选中Telnet服务器、Telnet客户端并打开这两项功能 开启Telnet服务命令行下输入：net start Telnet">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://yoursite.com/2017/08/27/SSH远程连接本地虚拟机-一-：配置并开启服务/2.jpg">
-<meta property="og:updated_time" content="2017-08-27T15:46:12.606Z">
+<meta property="og:updated_time" content="2017-08-29T06:15:45.583Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="SSH远程连接本地虚拟机(一)：配置并开启服务">
-<meta name="twitter:description" content="环境：本机：Win7 　　虚拟机：Ubuntu 16.04  本机启动Telnet服务首先打开Telnet功能进入控制面板-&amp;gt;程序和功能-&amp;gt;打开或关闭Windows功能选中Telnet服务器、Telnet客户端并打开这两项功能 开启Telnet服务命令行下输入：net start Telnet  虚拟机配置SSH服务检查SSHbash下输入命令:service ssh出现unrecon">
+<meta name="twitter:description" content="环境：本机：Win7 　　虚拟机：Ubuntu 16.04  本机启动Telnet服务首先打开Telnet功能进入控制面板-&amp;gt;程序和功能-&amp;gt;打开或关闭Windows功能选中Telnet服务器、Telnet客户端并打开这两项功能 开启Telnet服务命令行下输入：net start Telnet">
 <meta name="twitter:image" content="http://yoursite.com/2017/08/27/SSH远程连接本地虚拟机-一-：配置并开启服务/2.jpg">
 
 
@@ -351,7 +351,7 @@
         <p><strong>环境：</strong><br>本机：Win7 　　虚拟机：Ubuntu 16.04</p>
 <hr>
 <h2 id="本机启动Telnet服务"><a href="#本机启动Telnet服务" class="headerlink" title="本机启动Telnet服务"></a>本机启动Telnet服务</h2><h3 id="首先打开Telnet功能"><a href="#首先打开Telnet功能" class="headerlink" title="首先打开Telnet功能"></a>首先打开Telnet功能</h3><p>进入控制面板-&gt;程序和功能-&gt;打开或关闭Windows功能<br>选中Telnet服务器、Telnet客户端并打开这两项功能</p>
-<h3 id="开启Telnet服务"><a href="#开启Telnet服务" class="headerlink" title="开启Telnet服务"></a>开启Telnet服务</h3><p>命令行下输入：<br><code>net start Telnet</code></p>
+<h3 id="开启Telnet服务"><a href="#开启Telnet服务" class="headerlink" title="开启Telnet服务"></a>开启Telnet服务</h3><p>命令行下输入：<br><code>net start Telnet</code><br><a id="more"></a></p>
 <hr>
 <h2 id="虚拟机配置SSH服务"><a href="#虚拟机配置SSH服务" class="headerlink" title="虚拟机配置SSH服务"></a>虚拟机配置SSH服务</h2><h3 id="检查SSH"><a href="#检查SSH" class="headerlink" title="检查SSH"></a>检查SSH</h3><p>bash下输入命令:<br><code>service ssh</code><br>出现unrecongnzed service 说明没有安装配置ssh，需要下载安装</p>
 <h3 id="安装SSH"><a href="#安装SSH" class="headerlink" title="安装SSH"></a>安装SSH</h3><p>命令:<br><code>sudo apt-get install ssh</code><br>如果下载失败，则先输入命令：<br><code>sudo apt-get update</code></p>
