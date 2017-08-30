@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-08-29T06:13:11.335Z</updated>
+  <updated>2017-08-29T15:45:22.660Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -16,11 +16,25 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>实例解析端口各状态含义</title>
+    <link href="http://yoursite.com/2017/08/29/%E5%AE%9E%E4%BE%8B%E8%A7%A3%E6%9E%90%E7%AB%AF%E5%8F%A3%E5%90%84%E7%8A%B6%E6%80%81%E5%90%AB%E4%B9%89/"/>
+    <id>http://yoursite.com/2017/08/29/实例解析端口各状态含义/</id>
+    <published>2017-08-29T15:45:22.000Z</published>
+    <updated>2017-08-29T15:45:22.660Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
     <title>SSH远程连接本地虚拟机(三)：远程上传或下载文件</title>
     <link href="http://yoursite.com/2017/08/27/SSH%E8%BF%9C%E7%A8%8B%E8%BF%9E%E6%8E%A5%E6%9C%AC%E5%9C%B0%E8%99%9A%E6%8B%9F%E6%9C%BA-%E4%B8%89-%EF%BC%9A%E8%BF%9C%E7%A8%8B%E4%B8%8A%E4%BC%A0%E6%88%96%E4%B8%8B%E8%BD%BD%E6%96%87%E4%BB%B6/"/>
     <id>http://yoursite.com/2017/08/27/SSH远程连接本地虚拟机-三-：远程上传或下载文件/</id>
     <published>2017-08-27T14:11:03.000Z</published>
-    <updated>2017-08-29T06:13:11.335Z</updated>
+    <updated>2017-08-29T16:11:01.621Z</updated>
     
     <content type="html"><![CDATA[<p>远程登录以后，你就可以”为所欲为”了，这里介绍一个最常用的场景：<br><strong>本地与虚拟机互传文件</strong><br>方法有很多，这里介绍三个：</p>
 <ul>
@@ -71,7 +85,7 @@
     <link href="http://yoursite.com/2017/08/27/SSH%E8%BF%9C%E7%A8%8B%E8%BF%9E%E6%8E%A5%E6%9C%AC%E5%9C%B0%E8%99%9A%E6%8B%9F%E6%9C%BA-%E4%BA%8C-%EF%BC%9A%E4%BD%BF%E7%94%A8Xshell%E6%88%96%E8%80%85Git-Bash/"/>
     <id>http://yoursite.com/2017/08/27/SSH远程连接本地虚拟机-二-：使用Xshell或者Git-Bash/</id>
     <published>2017-08-27T14:09:57.000Z</published>
-    <updated>2017-08-29T06:21:59.543Z</updated>
+    <updated>2017-08-29T16:09:24.088Z</updated>
     
     <content type="html"><![CDATA[<h2 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h2><p>Windows要远程连接Linux主机，有两种基本的思路：</p>
 <ol>
@@ -163,7 +177,7 @@
     <link href="http://yoursite.com/2017/08/23/%E8%BE%A8%E6%9E%90python%E4%B8%AD%E7%9A%84bytes%E5%92%8Cstr%E7%B1%BB%E5%9E%8B/"/>
     <id>http://yoursite.com/2017/08/23/辨析python中的bytes和str类型/</id>
     <published>2017-08-23T02:34:47.000Z</published>
-    <updated>2017-08-29T06:18:28.524Z</updated>
+    <updated>2017-08-30T02:35:10.421Z</updated>
     
     <content type="html"><![CDATA[<blockquote>
 <p>一篇描述该问题的精彩博文：<a href="http://www.cnblogs.com/chownjy/p/6625299.html" target="_blank" rel="external">被引用博文</a></p>
@@ -182,9 +196,10 @@
 </ul>
 <hr>
 <h2 id="str和bytes相互转换："><a href="#str和bytes相互转换：" class="headerlink" title="str和bytes相互转换："></a>str和bytes相互转换：</h2><p>理解了差异之后，转换就显得很自然了–无非就是不同类型对象之间的转换<br><em>str转换为bytes的过程称为<strong>编码</strong></em><br><em>bytes转换为str的过程称为<strong>解码/译码</strong></em></p>
-<p>转换的方式有两种：</p>
+<p>转换的方式有三种：</p>
 <h3 id="1-对象式的：decode，encode"><a href="#1-对象式的：decode，encode" class="headerlink" title="1.对象式的：decode，encode"></a>1.对象式的：decode，encode</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">s1 = u&quot;中文&quot;</div><div class="line">#将Unicode重新编码为GBK</div><div class="line">b1 = s1.encode(&quot;gbk&quot;)</div><div class="line">s2 = b1.decode(&quot;gbk&quot;)</div></pre></td></tr></table></figure>
 <h3 id="2-过程式的：str-byte-encoding-bytes-str-encoding"><a href="#2-过程式的：str-byte-encoding-bytes-str-encoding" class="headerlink" title="2.过程式的：str(byte,encoding=),bytes(str,encoding=)"></a>2.过程式的：str(byte,encoding=),bytes(str,encoding=)</h3><p><em>【注】两个的位置参数都为encoding，并没有decoding</em><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">s1 = &quot;中&quot;</div><div class="line">b1 = bytes(s1,encoding=&quot;utf-8&quot;)</div><div class="line">s2 = str(b1,encoding=&quot;utf-8&quot;)</div><div class="line">s1 == s2</div></pre></td></tr></table></figure></p>
+<h3 id="3-python3-X的特性："><a href="#3-python3-X的特性：" class="headerlink" title="3.python3.X的特性："></a>3.python3.X的特性：</h3><p>如果是ASCII字符串，那么可以在字符串前面加上b来转化为bytes对象，<br>这个特性在数据传输，尤其是网络通信中非常常用。<br><code>[b&#39;hehe&#39;, b&#39;xixi&#39;, b&#39;pu&#39;]</code><br><code>sock.send(b&quot;Accept,%s!&quot; % data.decode(&quot;utf-8&quot;).encode(&quot;utf-8&quot;))</code></p>
 ]]></content>
     
     <summary type="html">
